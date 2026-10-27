@@ -23,10 +23,20 @@ def check_details (e):
     }
 
     #gets the info from index.html
-    element_input = document.getElementById("ELEMENT").value
+    element_input = document.getElementById("element").value
 
-    result = non_metals.get(element_input, ("Element not found", "-", "-"))
-    
+    element_display = non_metals.get(element_input, ("Element not found", "-", "-"))
+
+    #from ma'am
+    result = f"""
+    <div>
+    <b> Symbol: </b> {element_input} <br>
+    <b> Element: </b> {element_display[0]} <br>
+    <b> Atomic Number: </b> {element_display[1]} <br>
+    <b> Atomic Mass: </b> {element_display[2]}
+    </div>
+    """
+
     #displays the result
     display(result, target = "result")
 
