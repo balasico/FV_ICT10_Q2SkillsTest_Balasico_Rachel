@@ -25,7 +25,7 @@ def check_details (e):
     #gets the info from index.html
     element_input = document.getElementById("ELEMENT").value
 
-    result = non_metals.get(element_input, ("Element not found", "-", "-")  )
+    result = non_metals.get(element_input, ("Element not found", "-", "-"))
     
     #displays the result
     display(result, target = "result")
